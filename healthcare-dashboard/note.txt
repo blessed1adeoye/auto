@@ -1,0 +1,8 @@
+# Navigate to your project folder
+cd C:\Users\HP\Desktop\bgt\2026\HIMD\Quarterly\2nd\healthcare-dashboard
+
+# Build the Docker image
+docker build -t healthcare-dashboard .
+
+# Run the container
+docker run -d -p 8050:8050 -v "%cd%/data:/app/data" --name dashboard healthcare-dashboard
